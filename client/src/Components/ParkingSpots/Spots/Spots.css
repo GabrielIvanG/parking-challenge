@@ -1,0 +1,30 @@
+
+.spot{
+    display: flex;
+    background-color: white;
+    min-height: 20px;
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+}
+
+.spotImg{
+    position: relative;
+    height: auto;
+}
+
+.businessInfoRating{
+    width: 50%;
+    background-color: #FC834B;
+    margin-left: 1rem;
+    padding: 1.2rem;
+}
+
+.businessInfoAdress{
+    width: 30%;
+    margin-left: 1rem;
+    padding: 1.2rem;
+    background-color: #7777;
+}

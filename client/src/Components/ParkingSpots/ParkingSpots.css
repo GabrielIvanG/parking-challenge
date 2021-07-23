@@ -1,0 +1,33 @@
+.ParkingSpots{
+    display: flex;
+    background-color: #fa824c ;
+    width: 65%;
+    align-items: center;
+    margin: auto;
+    min-height: 3.75rem;
+    border-radius: 1rem;
+}
+
+
+#findButton{
+    height: 2.5rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+#findButton:hover {
+    transform: scale(1.2);
+}
+
+input{
+    display: flex;
+    border-radius: 1rem;
+    border: none;
+    height: 2rem;
+    width: 85%;
+    justify-content: flex-start;
+    margin-left: 2.75rem;
+    outline: none;
+    text-align: center;
+    font-size: 1.25rem;
+}
