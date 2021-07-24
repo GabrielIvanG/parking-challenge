@@ -12,7 +12,9 @@
 #findButton{
     height: 2.5rem;
     margin-left: 1.5rem;
+    margin-right: 1.5rem;
     cursor: pointer;
+    margin: auto;
 }
 
 #findButton:hover {
@@ -30,4 +32,13 @@ input{
     outline: none;
     text-align: center;
     font-size: 1.25rem;
+}
+
+button{
+    background-color: #fa824c;
+    border:none;
+    border-radius: 2rem;
+    padding: 0;
+    margin: auto;
+    max-width: 43px;
 }

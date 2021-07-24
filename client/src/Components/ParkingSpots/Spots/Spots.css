@@ -11,7 +11,7 @@
 }
 
 .spotImg{
-    position: relative;
+    
     height: auto;
 }
 
@@ -27,4 +27,11 @@
     margin-left: 1rem;
     padding: 1.2rem;
     background-color: #7777;
+}
+
+@media (max-width: 600px) {
+    .spot {
+        display: flex;
+        flex-direction: column;
+    }
 }
