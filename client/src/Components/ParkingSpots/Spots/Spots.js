@@ -16,9 +16,10 @@ export default function Spots({parkings}) {
             <div className='businessInfoAdress'>
                 Adress
                 <ul className='addressInfo'>
-                {parkings.address.map((current, idx) => {
-                    <li key={idx}>{current}</li>
-                })}
+                {parkings.address &&
+						parkings.address.map((parking,idx) => (
+							<li key={idx}> {parking} </li>
+						))}
                 </ul>
             </div>
         </div>
