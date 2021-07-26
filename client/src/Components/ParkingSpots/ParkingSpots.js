@@ -36,9 +36,9 @@ export default function ParkingSpots() {
     }
     
   }
+  
 
-
-  const results = useSelector((business) => business)
+  const results = useSelector((business) => business.business)
   return (
       <>
       <form onSubmit={submit} className='ParkingSpots' >
@@ -50,8 +50,7 @@ export default function ParkingSpots() {
           </button>
       </form>
       <div className='parkingContainer'>
-        {console.log(results)}
-        <Spots />
+        {results.map( (business , idx) => <Spots key={idx} />)}
       </div>
       </>
   )
