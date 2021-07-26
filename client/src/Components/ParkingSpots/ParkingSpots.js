@@ -50,7 +50,7 @@ export default function ParkingSpots() {
           </button>
       </form>
       <div className='parkingContainer'>
-        {results.map( (business , idx) => <Spots key={idx} />)}
+        {results.map( (business , idx) => <Spots key={idx} parkings={business} />)}
       </div>
       </>
   )
