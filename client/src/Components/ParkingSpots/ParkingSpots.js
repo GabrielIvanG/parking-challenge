@@ -2,7 +2,7 @@ import React, {useState } from 'react';
 import './ParkingSpots.css';
 import findIcon from '../../icons/findIcon.png';
 import Spots from './Spots/Spots.js';
-import {getBusiness} from '../../redux/actions/actions.js';
+import {getBusiness , cleanError} from '../../redux/actions/actions.js';
 import { useDispatch, useSelector } from "react-redux";
 import {v4 as unicID} from 'uuid';
 
@@ -23,9 +23,18 @@ export default function ParkingSpots() {
     }
     
   }
-  
 
-  const results = useSelector((business) => business.business)
+  const results = useSelector((state) => state.business)
+  const error = useSelector( state => state.error)
+
+  if (error.message) {
+    alert('city not found')
+    dispatch(cleanError())
+    document.getElementById('locationInput').value= ''
+  }
+
+
+
   return (
       <>
       <form onSubmit={submit} className='ParkingSpots' >

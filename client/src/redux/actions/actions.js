@@ -20,9 +20,27 @@ export const getBusiness = (
 			});
 		} catch (error) {
 			dispatch({
-				type: 'GET_BUSINESS',
+				type: 'GET_BUSINESS_FAILURE',
 				payload: {
-					error: 'Not found',
+					message: 'Not found',
+				},
+			});
+		}
+	};
+};
+
+export const cleanError = () => {
+	return (dispatch) => {
+		try {
+			dispatch({
+				type: 'CLEAN_ERROR',
+				payload: '',
+			});
+		} catch (error) {
+			dispatch({
+				type: 'CLEAN_ERROR_FAIL',
+				payload: {
+					message: 'cant clean',
 				},
 			});
 		}

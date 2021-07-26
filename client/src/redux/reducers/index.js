@@ -1,7 +1,8 @@
 import {ActionTypes} from '../constants.js'
 
 const initialState = {
-	business: []
+	business: [],
+	error: []
 };
 
 const reducer = (state = initialState, {type, payload}) => {
@@ -11,6 +12,16 @@ const reducer = (state = initialState, {type, payload}) => {
 				...state,
 				business: payload,
 			};
+		case 'GET_BUSINESS_FAILURE' :
+			return {
+				...state,
+				error: payload,
+			};
+		case 'CLEAN_ERROR' :
+			return {
+				...state,
+				error: payload
+			}
 		default:
 			return state;
 	}
