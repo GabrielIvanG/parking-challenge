@@ -1,9 +1,10 @@
 import React, {useState } from 'react';
-import './ParkingSpots.css'
-import findIcon from '../../icons/findIcon.png'
-import Spots from './Spots/Spots.js'
-import {getBusiness} from '../../redux/actions/actions.js'
-import { useDispatch, useSelector } from "react-redux"
+import './ParkingSpots.css';
+import findIcon from '../../icons/findIcon.png';
+import Spots from './Spots/Spots.js';
+import {getBusiness} from '../../redux/actions/actions.js';
+import { useDispatch, useSelector } from "react-redux";
+import {v4 as unicID} from 'uuid';
 
 export default function ParkingSpots() {
 
@@ -36,7 +37,7 @@ export default function ParkingSpots() {
           </button>
       </form>
       <div className='parkingContainer'>
-        {results.map( (business , idx) => <Spots key={idx} parkings={business} />)}
+        {results.map( business => <Spots key={unicID()} parkings={business} />)}
       </div>
       </>
   )

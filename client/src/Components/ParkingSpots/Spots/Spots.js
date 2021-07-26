@@ -3,6 +3,7 @@ import './Spots.css'
 import noImg from '../../../img/noImageAvailable.png'
 import CustomizedRatings from './Rating/Rating.js'
 import RateReviewIcon from '@material-ui/icons/RateReview';
+import {v4 as unicID} from 'uuid';
 
 
 export default function Spots({parkings}) {
@@ -45,8 +46,8 @@ export default function Spots({parkings}) {
                 Adress
                 <ul className='addressInfo'>
                 {parkings.address &&
-						parkings.address.map((parking,idx) => (
-							<li key={idx}> {parking} </li>
+						parkings.address.map((parking) => (
+							<li key={unicID()}> {parking} </li>
 						))}
                 </ul>
             </div>
