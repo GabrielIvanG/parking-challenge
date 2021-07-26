@@ -3,9 +3,9 @@ const {mapper, filter} = require('../utils/dataHandlers.js');
 
 const getParkings = async (req, res, next) => {
 	const location = req.query.location;
-	const score = Number(req.query.score) || 2.5;
+	const score = Number(req.query.score) || 3.5;
 	const offset = req.query.offset ? Number(req.query.offset) : 0;
-	const limit = req.query.limit ? Number(req.query.limit) : 6;
+	const limit = req.query.limit ? Number(req.query.limit) : 20;
 
 	try {
 		if (!location) {
