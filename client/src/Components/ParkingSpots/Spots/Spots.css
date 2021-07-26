@@ -11,9 +11,12 @@
 }
 
 .imgContainer{
+    display: flex;
     min-width: 200px;
     max-height: 300px;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .spotImg{
@@ -38,6 +41,13 @@
 .ratingColumns{
     display: flex;
     height: auto;
+    
+}
+
+.ratingComponent{
+    line-height: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
 }
 
 .leftColumn{
@@ -47,6 +57,17 @@
 
 }
 
+.reviewContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.5rem;
+}
+
+.reviewContainer h4{
+    font-size: .85rem;
+    align-self: flex-end;
+}
 .scoreContainer{
     background-color: white;
     border-radius: 1rem;
@@ -75,8 +96,12 @@
 }
 
 .rightColumn{
+    display: flex;
     float: righ;
     width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .businessInfoAdress{
@@ -92,4 +117,8 @@
         display: flex;
         flex-direction: column;
     }
+}
+
+a{
+    color: white;
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import './Spots.css'
 import noImg from '../../../img/noImageAvailable.png'
+import CustomizedRatings from './Rating/Rating.js'
+import RateReviewIcon from '@material-ui/icons/RateReview';
 
 
 export default function Spots({parkings}) {
@@ -16,18 +18,26 @@ export default function Spots({parkings}) {
             />
             </div>
             <div className='businessInfoRating'>
-                <h1>{parkings.name}</h1>
+                <a href={parkings.url} target="_blank" rel="noreferrer">
+                    <h1>{parkings.name}</h1>
+                </a>
                 <div className='ratingColumns'>
                     <div className='leftColumn'>
                         <div className='scoreContainer'>
-                            <h3>{parkings.score}</h3>
+                            <h3>{String(parkings.score).slice(0, 4)}</h3>
                             <hr className='separator' />
                             <h4>SCORE</h4>
                         </div>
                     </div>
                     <div className='rightColumn'>
-                        <h2>{parkings.rating}</h2>
-                        <h3>{parkings.reviews}</h3>
+                        <div className='ratingComponent'>
+                        <CustomizedRatings rating={parkings.rating} />
+                        </div>
+                        <div className='reviewContainer'>
+                            <h3>{parkings.reviews}</h3>
+                            <RateReviewIcon />
+                            <h4>reviews</h4>
+                        </div>
                     </div>
                 </div>
             </div>
