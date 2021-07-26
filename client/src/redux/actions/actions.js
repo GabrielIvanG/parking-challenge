@@ -1,5 +1,6 @@
 import axios from 'axios';
-import {ActionTypes} from '../constants';
+import {ActionTypes} from '../constants.js'
+
 
 export const getBusiness = (
 	location,
@@ -21,7 +22,7 @@ export const getBusiness = (
 			});
 		} catch (error) {
 			dispatch({
-				type: ActionTypes.GET_BUSINESS,
+				type: 'GET_BUSINESS',
 				payload: {
 					error: 'Not found',
 				},

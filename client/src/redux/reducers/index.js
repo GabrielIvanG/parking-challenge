@@ -1,4 +1,4 @@
-import {ActionTypes} from '../constants';
+import {ActionTypes} from '../constants.js'
 
 const initialState = {
 	business: []
@@ -6,10 +6,10 @@ const initialState = {
 
 const reducer = (state = initialState, {type, payload}) => {
 	switch (type) {
-		case ActionTypes.GET_BUSINESS:
+		case ActionTypes.GET_BUSINESS :
 			return {
 				...state,
-				products: payload,
+				business: payload,
 			};
 		default:
 			return state;
