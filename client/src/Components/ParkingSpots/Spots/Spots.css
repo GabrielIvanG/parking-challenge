@@ -10,16 +10,73 @@
     margin-top: 1.5rem;
 }
 
+.imgContainer{
+    min-width: 200px;
+    max-height: 300px;
+    margin: auto;
+}
+
 .spotImg{
-    
+    display: block;
+    max-width:200px;
+    max-height:200px;
+    width: auto;
     height: auto;
+    border-radius: 2rem;
 }
 
 .businessInfoRating{
+    color: white;
     width: 50%;
     background-color: #FC834B;
     margin-left: 1rem;
     padding: 1.2rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.ratingColumns{
+    display: flex;
+    height: auto;
+}
+
+.leftColumn{
+    float: left;
+    width: 50%;
+    display: flex;
+
+}
+
+.scoreContainer{
+    background-color: white;
+    border-radius: 1rem;
+    color: #FC834B;
+    margin: auto;
+    width: 5.5rem;
+    height: 6rem;
+    padding: 1;
+}
+
+.scoreContainer h3{
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+}
+
+.scoreContainer h4{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.separator {
+    width: 3rem;
+    height: .1rem;
+    background-color: #FC834B;
+    border: none
+}
+
+.rightColumn{
+    float: righ;
+    width: 50%;
 }
 
 .businessInfoAdress{
@@ -27,6 +84,7 @@
     margin-left: 1rem;
     padding: 1.2rem;
     background-color: #7777;
+    border-radius: 2rem;
 }
 
 @media (max-width: 600px) {

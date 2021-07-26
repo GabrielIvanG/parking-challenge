@@ -5,24 +5,10 @@ import Spots from './Spots/Spots.js'
 import {getBusiness} from '../../redux/actions/actions.js'
 import { useDispatch, useSelector } from "react-redux"
 
-// const axios = require('axios').default
-
-
-
 export default function ParkingSpots() {
 
   const [location, setLocation] = useState('')
 
-  // const getBus = async (location) => {
-  //   const {data} = await axios.get(
-  //     `${process.env.REACT_APP_BACKEND_URL}parkings?location=${location}`
-  //   )
-    
-  //   let newData = data.response.parkings
-  //   console.log(newData)
-  // }
-
-  // getBus('NY')
 
   const dispatch = useDispatch()
 
@@ -32,7 +18,7 @@ export default function ParkingSpots() {
     if (location){
       dispatch(getBusiness(location))
     }else {
-      alert('Insert a location')
+      alert('Insert a valid location')
     }
     
   }

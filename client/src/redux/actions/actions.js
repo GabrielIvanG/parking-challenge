@@ -14,8 +14,6 @@ export const getBusiness = (
 
 			let newData = data.response.parkings
 
-			// let newArrData = {pages: data.pages, business : newData};
-
 			dispatch({
 				type: ActionTypes.GET_BUSINESS,
 				payload: newData,
