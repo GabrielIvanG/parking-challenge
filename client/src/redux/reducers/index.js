@@ -4,6 +4,7 @@ const initialState = {
 	business: [],
 	error: [],
 	coords: [],
+	errorCoords: [],
 };
 
 const reducer = (state = initialState, {type, payload}) => {
@@ -24,14 +25,14 @@ const reducer = (state = initialState, {type, payload}) => {
 				error: payload
 			}
 		case 'GET_COORDS' :
-			return {
+			return { 
 				...state,
-				coords: payload
+				coords: [...state.coords, payload]
 			}
 			case 'GET_COORDS_FAIL' :
 			return {
 				...state,
-				error: payload
+				errorCoords: payload
 			}
 		default:
 			return state;

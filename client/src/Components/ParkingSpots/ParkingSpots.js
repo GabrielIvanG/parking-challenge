@@ -13,19 +13,26 @@ export default function ParkingSpots() {
 
   const dispatch = useDispatch()
 
+  
+
   const submit = (e) => {
     e.preventDefault();
 
     if (location){
       dispatch(getBusiness(location))
+
     }else {
       alert('Insert a valid location')
     }
     
   }
 
+
+
   const results = useSelector((state) => state.business)
   const error = useSelector( state => state.error)
+
+  
 
   if (error.message) {
     alert('city not found')
