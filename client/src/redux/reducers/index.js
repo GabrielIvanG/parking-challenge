@@ -2,7 +2,8 @@ import {ActionTypes} from '../constants.js'
 
 const initialState = {
 	business: [],
-	error: []
+	error: [],
+	coords: [],
 };
 
 const reducer = (state = initialState, {type, payload}) => {
@@ -18,6 +19,16 @@ const reducer = (state = initialState, {type, payload}) => {
 				error: payload,
 			};
 		case 'CLEAN_ERROR' :
+			return {
+				...state,
+				error: payload
+			}
+		case 'GET_COORDS' :
+			return {
+				...state,
+				coords: payload
+			}
+			case 'GET_COORDS_FAIL' :
 			return {
 				...state,
 				error: payload
