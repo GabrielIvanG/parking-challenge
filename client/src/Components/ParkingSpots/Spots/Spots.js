@@ -1,33 +1,14 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Spots.css'
 import noImg from '../../../img/noImageAvailable.png'
 import CustomizedRatings from './Rating/Rating.js'
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import {v4 as unicID} from 'uuid';
-import { getCoords } from '../../../redux/actions/actions';
-import { useDispatch, useSelector } from 'react-redux';
 
 
 
 export default function Spots({parkings}) {
 
-    const dispatch = useDispatch()
-    
-    // if (parkings.address) {
-    //     dispatch(getCoords(parkings.address))
-    // }
-
-    
-    useEffect(()=>{
-        const timer = setTimeout(()=> dispatch(getCoords(parkings.address)),
-        3000);
-        return () => clearTimeout(timer)
-    },[])
-    
-    const result = useSelector( state => state.coords)
-    if (result){
-        console.log(result)
-    }
 
     return (
         <div className='spot'>
