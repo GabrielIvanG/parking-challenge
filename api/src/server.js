@@ -10,7 +10,7 @@ server.use(express.json());
 server.use(morgan('dev'));
 server.use(
 	cors({
-		origin: process.env.FRONTEND_URL,
+		origin: '*',
 		credentials: true,
 		methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
 		allowedHeaders: [
