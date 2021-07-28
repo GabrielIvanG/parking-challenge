@@ -12,19 +12,18 @@
 
 .imgContainer{
     display: flex;
-    min-width: 200px;
-    max-height: 300px;
     margin: auto;
     justify-content: center;
     align-items: center;
 }
 
 .spotImg{
+    max-width: 250px;
+    max-height: 250px;
     display: block;
-    max-width:200px;
-    max-height:200px;
     width: auto;
     height: auto;
+
     border-radius: 2rem;
 }
 
@@ -104,18 +103,40 @@
     flex-direction: column;
 }
 
-.businessInfoAdress{
+.businessInfoAdressUL{
+    text-align: center;
     width: 30%;
     margin-left: 1rem;
     padding: 1.2rem;
     background-color: #7777;
     border-radius: 2rem;
+    display:inline-table;
 }
 
-@media (max-width: 600px) {
+.addressInfo{
+    list-style: none;
+    white-space: nowrap;
+    display:inline;
+}
+
+@media (max-width: 800px) {
     .spot {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 800px) {
+    .spot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spot > * {
+        padding: 1rem;
     }
 }
 

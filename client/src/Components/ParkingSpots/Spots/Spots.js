@@ -44,12 +44,13 @@ export default function Spots({parkings}) {
                     </div>
                 </div>
             </div>
-            <div className='businessInfoAdress'>
-                Adress
+            <div className='businessInfoAdressUL'>
+                <h2>Address</h2>
+                <hr />
                 <ul className='addressInfo'>
                 {parkings.address &&
 						parkings.address.map((parking) => (
-							<li key={unicID()}> {parking} </li>
+							<li key={unicID()}> {parking} <hr /> </li>
 						))}
                 </ul>
             </div>
