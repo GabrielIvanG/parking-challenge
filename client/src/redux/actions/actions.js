@@ -47,27 +47,3 @@ export const cleanError = () => {
 	};
 };
 
-export const getCoords = ( address ) => {
-	return async (dispatch) => {
-		try {
-			const cleanAddress = encodeURI(address[0])
-			const {data} = await axios.get(
-				`${process.env.REACT_APP_BACKEND_URL}geolocation?address=${cleanAddress}`
-			);
-
-			let coords = data.response
-
-			dispatch({
-				type: 'GET_COORDS',
-				payload: coords,
-			});
-		} catch (error) {
-			dispatch({
-				type: 'GET_COORDS_FAIL',
-				payload: {
-					message: 'cannot get coords',
-				},
-			});
-		}
-	};
-};

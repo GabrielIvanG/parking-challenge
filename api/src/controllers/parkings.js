@@ -1,4 +1,4 @@
-const {makeRequest , getGeocode} = require('../utils/apiRequest.js');
+const {makeRequest } = require('../utils/apiRequest.js');
 const {mapper, filter} = require('../utils/dataHandlers.js');
 
 const getParkings = async (req, res, next) => {
@@ -35,27 +35,8 @@ const getParkings = async (req, res, next) => {
 	}
 };
 
-const getCoords = async (req, res, next) => {
-	const address = req.query.address;
 
-	try {
-		if (!address) {
-			throw new Error();
-		}
-		const {data} = await getGeocode(address);
-		const location = data.results[0].location
-
-		res.send({
-			response: location ,
-			message: 'Success',
-		});
-	} catch (err) {
-		err.response ? console.log(err.response.data) : console.log(err);
-		next(err);
-	}
-};
 
 module.exports = {
 	getParkings,
-	getCoords
 };
