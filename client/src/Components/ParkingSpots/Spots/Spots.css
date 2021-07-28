@@ -12,21 +12,17 @@
 
 .imgContainer{
     display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
+    max-width: 20%;
     padding: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .spotImg{
-    max-width: 250px;
-    max-height: 250px;
-    display: block;
-    width: auto;
-    height: auto;
-
+    max-height: 200px;
+    max-width: 200px;
     border-radius: 2rem;
+    margin: auto;
 }
 
 .businessInfoRating{
@@ -110,9 +106,10 @@
     width: 30%;
     margin-left: 1rem;
     padding: 1.2rem;
-    background-color: #7777;
+    background-color: #979797;
     border-radius: 2rem;
     display:inline-table;
+    color: white;
 }
 
 .addressInfo{
