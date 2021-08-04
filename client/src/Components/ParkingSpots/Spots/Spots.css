@@ -1,144 +1,141 @@
-
-.spot{
-    display: flex;
-    background-color: white;
-    min-height: 20px;
-    width: 60%;
-    margin: auto;
-    padding: 2rem;
-    border-radius: 2rem;
-    margin-top: 1.5rem;
+.spot {
+  display: flex;
+  background-color: white;
+  min-height: 20px;
+  width: 60%;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
 }
 
-.imgContainer{
-    display: flex;
-    max-width: 20%;
-    padding: 1rem;
-    align-items: center;
-    justify-content: center;
+.imgContainer {
+  display: flex;
+  min-width: 200px;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.spotImg{
-    max-height: 200px;
-    max-width: 200px;
-    border-radius: 2rem;
-    margin: auto;
+.spotImg {
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 2rem;
+  margin: auto;
 }
 
-.businessInfoRating{
-    color: white;
-    width: 50%;
-    background-color: #FC834B;
-    margin-left: 1rem;
-    padding: 1.2rem;
-    border-radius: 2rem;
-    text-align: center;
+.businessInfoRating {
+  color: white;
+  width: 50%;
+  background-color: #fc834b;
+  margin-left: 1rem;
+  padding: 1.2rem;
+  border-radius: 2rem;
+  text-align: center;
 }
 
-.ratingColumns{
-    display: flex;
-    height: auto;
-    
+.ratingColumns {
+  display: flex;
+  height: auto;
 }
 
-.ratingComponent{
-    line-height: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: -1rem;
+.ratingComponent {
+  line-height: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
 }
 
-.leftColumn{
-    float: left;
-    width: 50%;
-    display: flex;
-
+.leftColumn {
+  float: left;
+  width: 50%;
+  display: flex;
 }
 
-.reviewContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0.5rem;
+.reviewContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.5rem;
 }
 
-.reviewContainer h4{
-    font-size: .85rem;
-    align-self: flex-end;
+.reviewContainer h4 {
+  font-size: 0.85rem;
+  align-self: flex-end;
 }
-.scoreContainer{
-    background-color: white;
-    border-radius: 1rem;
-    color: #FC834B;
-    margin: auto;
-    width: 5.5rem;
-    height: 6rem;
-    padding: 1;
-}
-
-.scoreContainer h3{
-    font-size: 2.2rem;
-    margin: 0.5rem 0;
+.scoreContainer {
+  background-color: white;
+  border-radius: 1rem;
+  color: #fc834b;
+  margin: auto;
+  width: 5.5rem;
+  height: 6rem;
+  padding: 1;
 }
 
-.scoreContainer h4{
-    font-size: 1rem;
-    margin: 0.5rem 0;
+.scoreContainer h3 {
+  font-size: 2.2rem;
+  margin: 0.5rem 0;
+}
+
+.scoreContainer h4 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
 }
 
 .separator {
-    width: 3rem;
-    height: .1rem;
-    background-color: #FC834B;
-    border: none
+  width: 3rem;
+  height: 0.1rem;
+  background-color: #fc834b;
+  border: none;
 }
 
-.rightColumn{
+.rightColumn {
+  display: flex;
+  float: righ;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.businessInfoAdressUL {
+  text-align: center;
+  width: 30%;
+  margin-left: 1rem;
+  padding: 1.2rem;
+  background-color: #979797;
+  border-radius: 2rem;
+  display: inline-table;
+  color: white;
+}
+
+.addressInfo {
+  list-style: none;
+  white-space: nowrap;
+  display: inline;
+}
+
+@media (max-width: 800px) {
+  .spot {
     display: flex;
-    float: righ;
-    width: 50%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+@media (max-width: 800px) {
+  .spot {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .spot > * {
+    padding: 1rem;
+  }
 }
 
-.businessInfoAdressUL{
-    text-align: center;
-    width: 30%;
-    margin-left: 1rem;
-    padding: 1.2rem;
-    background-color: #979797;
-    border-radius: 2rem;
-    display:inline-table;
-    color: white;
-}
-
-.addressInfo{
-    list-style: none;
-    white-space: nowrap;
-    display:inline;
-}
-
-@media (max-width: 800px) {
-    .spot {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-@media (max-width: 800px) {
-    .spot {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .spot > * {
-        padding: 1rem;
-    }
-}
-
-a{
-    color: white;
+a {
+  color: white;
 }
